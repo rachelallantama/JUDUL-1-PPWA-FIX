@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Informasi Data Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -18,30 +19,24 @@
         </p>
 
         <img src="logounila.png"
-             alt="Gambar mahasiswa"
+             alt="Logo Universitas"
              width="200"
              height="200">
     </header>
 
-    <hr>
-
     <nav>
         <ul>
             <li>
-                <a href="#informasi">Informasi Aplikasi</a>
+                <a href="#informasi">Informasi Sistem</a>
             </li>
-
             <li>
                 <a href="#daftar-mahasiswa">Daftar Mahasiswa</a>
             </li>
-
             <li>
                 <a href="#form-tambah">Tambah Mahasiswa Baru</a>
             </li>
         </ul>
     </nav>
-
-    <hr>
 
     <main>
 
@@ -55,7 +50,6 @@
             </p>
 
             <article>
-
                 <h3>Tujuan Sistem</h3>
 
                 <p>
@@ -63,21 +57,23 @@
                     memudahkan pengguna dalam melihat dan mengelola
                     data mahasiswa.
                 </p>
-
             </article>
 
-            <hr>
+        </section>
 
-            <section id="daftar-mahasiswa">
 
-                <h2>Daftar Mahasiswa Aktif</h2>
+        <section id="daftar-mahasiswa">
 
-                <p>
-                    Berikut merupakan daftar mahasiswa aktif
-                    pada Program Studi Teknik Informatika.
-                </p>
+            <h2>Daftar Mahasiswa Aktif</h2>
 
-                <table border="1" cellpadding="8" cellspacing="0">
+            <p>
+                Berikut merupakan daftar mahasiswa aktif
+                pada Program Studi Teknik Informatika.
+            </p>
+
+            <div class="table-responsive">
+
+                <table>
 
                     <thead>
                         <tr>
@@ -96,14 +92,12 @@
 
                         <tr>
                             <td>1</td>
-
                             <td>
                                 <img src="fotorachel.jpg.jpeg"
-                                     alt="Foto"
+                                     alt="Foto mahasiswa"
                                      width="80"
                                      height="100">
                             </td>
-
                             <td>2455061001</td>
                             <td>Ghea Putri Nashirah</td>
                             <td>Teknik Informatika</td>
@@ -114,14 +108,12 @@
 
                         <tr>
                             <td>2</td>
-
                             <td>
                                 <img src="fotorachel.jpg.jpeg"
-                                     alt="Foto"
+                                     alt="Foto mahasiswa"
                                      width="80"
                                      height="100">
                             </td>
-
                             <td>2455061002</td>
                             <td>Siti Rahma</td>
                             <td>Teknik Informatika</td>
@@ -132,14 +124,12 @@
 
                         <tr>
                             <td>3</td>
-
                             <td>
                                 <img src="fotorachel.jpg.jpeg"
-                                     alt="Foto"
+                                     alt="Foto mahasiswa"
                                      width="80"
                                      height="100">
                             </td>
-
                             <td>2455061003</td>
                             <td>Intan Safitri</td>
                             <td>Teknik Informatika</td>
@@ -152,160 +142,145 @@
 
                 </table>
 
-            </section>
+            </div>
 
-            <hr>
+        </section>
 
-            <section id="form-tambah">
 
-                <h2>Tambah Mahasiswa Baru</h2>
+        <section id="form-tambah">
 
-                <p>
-                    Silakan isi formulir berikut untuk menambahkan
-                    data mahasiswa baru.
-                </p>
+            <h2>Tambah Mahasiswa Baru</h2>
 
-                <form action="#" method="POST">
+            <p>
+                Silakan isi formulir berikut untuk menambahkan
+                data mahasiswa baru.
+            </p>
 
-                    <fieldset>
+            <form action="#" method="POST">
 
-                        <legend>Form Data Mahasiswa</legend>
+                <fieldset>
 
-                        <!-- Field 1: NPM -->
-                        <p>
-                            <label for="npm">
-                                Nomor Pokok Mahasiswa (NPM)
-                            </label>
-                            <br>
+                    <legend>Form Data Mahasiswa</legend>
 
-                            <input
-                                type="text"
-                                id="npm"
-                                name="npm"
-                                placeholder="Contoh : 2315061118"
-                                required
-                                pattern="[0-9]{8,12}"
-                                title="NPM harus berupa angka 8-12 digit">
+                    <p>
+                        <label for="npm">
+                            Nomor Pokok Mahasiswa (NPM)
+                        </label>
 
-                            <br>
+                        <input
+                            type="text"
+                            id="npm"
+                            name="npm"
+                            placeholder="Contoh : 2315061118"
+                            required
+                            pattern="[0-9]{8,12}"
+                            title="NPM harus berupa angka 8-12 digit">
 
-                            <small>
-                                NPM harus berupa angka 8-12 digit.
-                            </small>
-                        </p>
+                        <small>
+                            NPM harus berupa angka 8-12 digit.
+                        </small>
+                    </p>
 
-                        <!-- Field 2: Nama -->
-                        <p>
-                            <label for="nama">
-                                Nama Lengkap:
-                            </label>
-                            <br>
 
-                            <input
-                                type="text"
-                                id="nama"
-                                name="nama"
-                                placeholder="Contoh : Rachel Inaya A"
-                                required
-                                minlength="3"
-                                maxlength="100">
+                    <p>
+                        <label for="nama">
+                            Nama Lengkap:
+                        </label>
 
-                            <br>
+                        <input
+                            type="text"
+                            id="nama"
+                            name="nama"
+                            placeholder="Contoh : Rachel Inaya A"
+                            required
+                            minlength="3"
+                            maxlength="100">
 
-                            <small>
-                                Nama minimal 3 karakter dan maksimal 100 karakter.
-                            </small>
-                        </p>
+                        <small>
+                            Nama minimal 3 karakter dan maksimal 100 karakter.
+                        </small>
+                    </p>
 
-                        <!-- Field 3: Program Studi -->
-                        <p>
-                            <label for="program_studi">
-                                Program Studi:
-                            </label>
-                            <br>
 
-                            <select
-                                id="program_studi"
-                                name="program_studi"
-                                required>
+                    <p>
+                        <label for="program_studi">
+                            Program Studi:
+                        </label>
 
-                                <option value="">
-                                    Pilih Program Studi
-                                </option>
+                        <select
+                            id="program_studi"
+                            name="program_studi"
+                            required>
 
-                                <option value="Teknik Informatika">
-                                    Teknik Informatika
-                                </option>
+                            <option value="">
+                                Pilih Program Studi
+                            </option>
 
-                            </select>
+                            <option value="Teknik Informatika">
+                                Teknik Informatika
+                            </option>
 
-                            <br>
+                        </select>
 
-                            <small>
-                                Silakan pilih program studi.
-                            </small>
-                        </p>
+                        <small>
+                            Silakan pilih program studi.
+                        </small>
+                    </p>
 
-                        <!-- Field 4: Angkatan -->
-                        <p>
-                            <label for="angkatan">
-                                Tahun Angkatan:
-                            </label>
-                            <br>
 
-                            <input
-                                type="number"
-                                id="angkatan"
-                                name="angkatan"
-                                placeholder="Contoh : 2024"
-                                required
-                                min="2018"
-                                max="2026">
+                    <p>
+                        <label for="angkatan">
+                            Tahun Angkatan:
+                        </label>
 
-                            <br>
+                        <input
+                            type="number"
+                            id="angkatan"
+                            name="angkatan"
+                            placeholder="Contoh : 2024"
+                            required
+                            min="2018"
+                            max="2026">
 
-                            <small>
-                                Tahun angkatan harus berada antara 2018-2026.
-                            </small>
-                        </p>
+                        <small>
+                            Tahun angkatan harus berada antara 2018-2026.
+                        </small>
+                    </p>
 
-                        <!-- Field 5: Email -->
-                        <p>
-                            <label for="email">
-                                Alamat Email:
-                            </label>
-                            <br>
 
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="Contoh : email@example.com"
-                                required>
+                    <p class="full-width">
+                        <label for="email">
+                            Alamat Email:
+                        </label>
 
-                            <br>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Contoh : email@example.com"
+                            required>
 
-                            <small>
-                                Gunakan alamat email yang aktif.
-                            </small>
-                        </p>
+                        <small>
+                            Gunakan alamat email yang aktif.
+                        </small>
+                    </p>
 
-                        <!-- Field 6: Button -->
-                        <p>
-                            <button type="submit">
-                                Simpan Data Mahasiswa
-                            </button>
 
-                            <button type="reset">
-                                Reset Formulir
-                            </button>
-                        </p>
+                    <p class="form-buttons">
 
-                    </fieldset>
+                        <button type="submit">
+                            Simpan Data Mahasiswa
+                        </button>
 
-                </form>
+                        <button type="reset">
+                            Reset Formulir
+                        </button>
 
-            </section>
+                    </p>
+
+                </fieldset>
+
+            </form>
 
         </section>
 
